@@ -16,7 +16,6 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fill_vertical="1"
             android:orientation="vertical">
 
             <ImageView
@@ -36,9 +35,8 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/textView1"
                     android:textAppearance="@style/TextAppearance.AppCompat"
-                    android:layout_gravity="center_horizontal"
                     android:layout_weight="1"
-                    android:gravity="left|right"/>
+                    android:gravity="center_horizontal" />
 
                 <TextView
                     android:text="1,37€"
@@ -47,7 +45,7 @@
                     android:id="@+id/textView2"
                     android:textAppearance="@style/TextAppearance.AppCompat"
                     android:layout_gravity="center_horizontal"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:gravity="left"/>
 
             </LinearLayout>
@@ -74,7 +72,6 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fill_vertical="1"
             android:orientation="vertical">
 
             <ImageView
