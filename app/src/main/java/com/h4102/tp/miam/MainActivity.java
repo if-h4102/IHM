@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void goToSoldesActivity(View view){
-
+        Intent intent = new Intent(this, AccountBalance.class);
+        startActivity(intent);
     }
 }
