@@ -46,6 +46,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/seekBar"
             android:layout_gravity="center_horizontal"
-            android:padding="5dp" />
+            android:padding="5dp"
+            android:minHeight="30dp"
+            android:splitTrack="false" />
     </LinearLayout>
 </RelativeLayout>
