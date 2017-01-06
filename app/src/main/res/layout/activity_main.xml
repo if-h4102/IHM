@@ -39,8 +39,7 @@
                     android:src="@drawable/restaurants"
                     android:scaleType="fitCenter"
                     android:layout_weight="4"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp" />
+                    android:layout_margin="10dp" />
 
                 <TextView
                     android:layout_width="fill_parent"
@@ -59,8 +58,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:layout_margin="3dp"
-                android:background="@drawable/borders"
-                android:clickable="true">
+                android:background="@drawable/borders">
 
                 <ImageView
                     android:layout_width="fill_parent"
@@ -68,8 +66,7 @@
                     android:id="@+id/im_soldes"
                     android:layout_weight="4"
                     android:src="@drawable/insa"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp" />
+                    android:layout_margin="10dp" />
 
                 <TextView
                     android:layout_width="fill_parent"
@@ -89,6 +86,60 @@
             android:layout_weight="1"
             android:layout_gravity="center_horizontal">
 
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="3dp"
+                android:background="@drawable/borders"
+                android:clickable="true">
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:id="@+id/im_organiser"
+                    android:layout_weight="4"
+                    android:src="@drawable/organiser_repas"
+                    android:layout_margin="10dp" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Organiser un repas"
+                    android:id="@+id/text_organiser"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:singleLine="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="3dp"
+                android:background="@drawable/borders"
+                android:clickable="true">
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:id="@+id/im_repas"
+                    android:layout_weight="4"
+                    android:src="@drawable/repas_futurs"
+                    android:layout_margin="10dp" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Repas futur"
+                    android:id="@+id/text_repas"
+                    android:layout_weight="1"
+                    android:textAlignment="center" />
+            </LinearLayout>
         </LinearLayout>
         <LinearLayout
             android:orientation="horizontal"
@@ -97,6 +148,59 @@
             android:layout_weight="1"
             android:layout_gravity="center_horizontal">
 
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/borders"
+                android:clickable="true">
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:id="@+id/im_sos"
+                    android:layout_weight="4"
+                    android:src="@drawable/sos"
+                    android:layout_margin="10dp" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="SOS ami"
+                    android:id="@+id/text_sos"
+                    android:textAlignment="center"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/borders"
+                android:clickable="true">
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:id="@+id/im_temps"
+                    android:layout_weight="4"
+                    android:src="@drawable/temps_attente"
+                    android:layout_margin="10dp" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Temps d&apos;attentse"
+                    android:id="@+id/text_temps"
+                    android:layout_weight="1"
+                    android:textAlignment="center" />
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 
