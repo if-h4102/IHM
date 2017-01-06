@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:weightSum="1"
+        android:gravity="center_vertical|center_horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/crous"
+                android:id="@+id/imageView1" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="Solde actuel : "
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView1"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal" />
+
+                <TextView
+                    android:text="1,37€"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView2"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="2"
+                    android:gravity="left"/>
+
+            </LinearLayout>
+
+            <Button
+                android:text="Accéder à l'application"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/button1"
+                tools:minHeight="60dip" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:weightSum="1"
+        android:gravity="center_vertical|center_horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/insa"
+                android:id="@+id/imageView2"
+                tools:paddingBottom="30dp" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:text="Solde forfait : "
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView3"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="0"
+                        android:gravity="right"
+                        tools:gravity="left" />
+
+                    <TextView
+                        android:text="Solde rechargement : "
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView5"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="0"
+                        android:gravity="right"
+                        tools:gravity="left" />
+
+                    <TextView
+                        android:text="Forfait : "
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView7"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="0"
+                        android:gravity="left|right"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:text="27,20€"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView4"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="0"
+                        android:gravity="left"/>
+
+                    <TextView
+                        android:text="0,00€"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView6"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="0"
+                        android:gravity="left"/>
+
+                    <TextView
+                        android:text="15 repas par mois"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView8"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="0"
+                        android:gravity="left"/>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
