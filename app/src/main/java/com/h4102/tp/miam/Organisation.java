@@ -22,19 +22,20 @@ public class Organisation extends AppCompatActivity {
         Button Cancel = (Button) findViewById(R.id.buttonCancel);
         final Organisation context = this;
         list = new ArrayList();
-        final String[] listNames = {"Jean", "Pierre", "Boris"};
-        final boolean[] isSelectedArray = {false, false, false};
+
         Send.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                String[] listNames = {"Jean", "Pierre", "Boris"};
+                final boolean[] isSelectedArray = {false, false, false};
                 new AlertDialog.Builder(context)
                         .setTitle("Invitez vos amis")
-                        .setMessage("Are you sure you want to delete this entry?")
                         .setMultiChoiceItems(listNames, isSelectedArray, new DialogInterface.OnMultiChoiceClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i, boolean b) {
-
+                                isSelectedArray[i] = b;
+                                
                             }
-                        })
+                        })/*
                         .setNeutralButton("Tout sélectionner", new DialogInterface.OnClickListener(){
                             public void onClick(DialogInterface dialog, int which) {
                                 // continue with delete
@@ -44,8 +45,8 @@ public class Organisation extends AppCompatActivity {
                             public void onClick(DialogInterface dialog, int which) {
                                 // continue with delete
                             }
-                        } )
-                        .setPositiveButton("C'est parti !", new DialogInterface.OnClickListener() {
+                        } )*/
+                        .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
                                 // continue with delete
                                 Intent intent = new Intent(context, Restaurant.class);
