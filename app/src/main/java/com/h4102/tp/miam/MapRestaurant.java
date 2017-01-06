@@ -14,12 +14,15 @@ public class MapRestaurant extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map_restaurant_bis);
 
-        CameraPosition cameraPosition = new CameraPosition.Builder()
-                .target(new LatLng(-33, 150))
-                .zoom(13)
-                .build();
+//        CameraPosition cameraPosition = new CameraPosition.Builder()
+//                .target(new LatLng(-33, 150))
+//                .zoom(13)
+//                .build();
+//
+//        MapFragment mapFragment = (MapFragment) getFragmentManager()
+//                .findFragmentById(R.id.map);
+//
 
-        MapFragment mapFragment =  
 
     }
 }
