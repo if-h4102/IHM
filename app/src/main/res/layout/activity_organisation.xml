@@ -9,8 +9,25 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.h4102.tp.miam.Organisation"
-    tools:showIn="@layout/activity_organisation">
+    tools:context="com.h4102.tp.miam.Organisation">
+
+    <Button
+        android:text="Envoyer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonSend"
+        android:layout_weight="1"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Annuler"
+        android:layout_width="251dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonCancel"
+        android:layout_alignTop="@+id/buttonSend"
+        android:layout_toRightOf="@+id/buttonSend" />
 
     <LinearLayout
         android:orientation="vertical"
@@ -82,86 +99,23 @@
                     android:layout_height="wrap_content"
                     android:text="Olivier"
                     android:id="@+id/checkBoxOlivier" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Choisir une heure"
+                    android:id="@+id/textView5" />
 
+                <TimePicker
+                    android:layout_width="match_parent"
+                    android:layout_height="89dp"
+                    android:id="@+id/timePicker2" />
             </LinearLayout>
-
+            
         </ScrollView>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Choisir une heure"
-            android:id="@+id/textView5" />
 
-        <TimePicker
-            android:layout_width="match_parent"
-            android:layout_height="89dp"
-            android:id="@+id/timePicker2" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Invitez vos amis"
-            android:id="@+id/choixManger" />
-
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:id="@+id/scrollView2"
-            android:layout_gravity="center_horizontal"
-            android:layout_weight="1">
-
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true">
-
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Prévert"
-                    android:id="@+id/checkBoxJosé" />
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="RU"
-                    android:id="@+id/checkBoxMichel" />
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="RI"
-                    android:id="@+id/checkBoxJean" />
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Grillon"
-                    android:id="@+id/checkBoxPierre" />
-            </LinearLayout>
-
-        </ScrollView>
 
     </LinearLayout>
-
-    <Button
-        android:text="Envoyer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/buttonSend"
-        android:layout_weight="1"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:text="Annuler"
-        android:layout_width="251dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/buttonCancel"
-        android:layout_alignTop="@+id/buttonSend"
-        android:layout_toRightOf="@+id/buttonSend" />
 </RelativeLayout>
