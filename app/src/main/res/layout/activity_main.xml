@@ -30,7 +30,8 @@
                 android:layout_weight="1"
                 android:clickable="true"
                 android:background="@drawable/borders"
-                android:layout_margin="3dp">
+                android:layout_margin="3dp"
+                android:onClick="goToRestaurantActivity">
 
                 <ImageView
                     android:layout_width="fill_parent"
@@ -58,7 +59,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:layout_margin="3dp"
-                android:background="@drawable/borders">
+                android:background="@drawable/borders"
+                android:onClick="goToSoldesActivity">
 
                 <ImageView
                     android:layout_width="fill_parent"
@@ -93,7 +95,8 @@
                 android:layout_weight="1"
                 android:layout_margin="3dp"
                 android:background="@drawable/borders"
-                android:clickable="true">
+                android:clickable="true"
+                android:onClick="goToOrganisationActivity">
 
                 <ImageView
                     android:layout_width="fill_parent"
@@ -121,7 +124,8 @@
                 android:layout_weight="1"
                 android:layout_margin="3dp"
                 android:background="@drawable/borders"
-                android:clickable="true">
+                android:clickable="true"
+                android:onClick="goToInvitationActivity">
 
                 <ImageView
                     android:layout_width="fill_parent"
@@ -155,7 +159,8 @@
                 android:layout_margin="3dp"
                 android:layout_weight="1"
                 android:background="@drawable/borders"
-                android:clickable="true">
+                android:clickable="true"
+                android:onClick="goToSosActivity">
 
                 <ImageView
                     android:layout_width="fill_parent"
@@ -182,7 +187,8 @@
                 android:layout_margin="3dp"
                 android:layout_weight="1"
                 android:background="@drawable/borders"
-                android:clickable="true">
+                android:clickable="true"
+                android:onClick="goToMapRestaurantActivity">
 
                 <ImageView
                     android:layout_width="fill_parent"
@@ -204,13 +210,4 @@
         </LinearLayout>
     </LinearLayout>
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageView"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/linearLayout"
-        android:layout_alignEnd="@+id/linearLayout"
-        android:layout_marginRight="219dp"
-        android:layout_marginEnd="219dp" />
 </RelativeLayout>
