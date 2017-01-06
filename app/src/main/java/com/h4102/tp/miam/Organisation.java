@@ -2,11 +2,14 @@ package com.h4102.tp.miam;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.content.Intent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TimePicker;
 
 import java.util.ArrayList;
 
@@ -18,11 +21,18 @@ public class Organisation extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_organisation);
 
+        final TimePicker time = (TimePicker) findViewById(R.id.timePicker2);
         Button Send = (Button) findViewById(R.id.buttonSend);
         Button Cancel = (Button) findViewById(R.id.buttonCancel);
         final Organisation context = this;
         list = new ArrayList();
 
+        time.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                time.setLayoutParams(new ActionBar.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,200));
+            }
+        });
         Send.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 String[] listNames = {"Jean", "Pierre", "Boris"};
@@ -33,7 +43,7 @@ public class Organisation extends AppCompatActivity {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i, boolean b) {
                                 isSelectedArray[i] = b;
-                                
+
                             }
                         })/*
                         .setNeutralButton("Tout sélectionner", new DialogInterface.OnClickListener(){
@@ -67,8 +77,7 @@ public class Organisation extends AppCompatActivity {
 
         Cancel.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v){
-                Intent intent = new Intent(v.getContext(), MapRestaurant.class);
-                startActivity(intent);
+                finish();
             }
         });
     }
