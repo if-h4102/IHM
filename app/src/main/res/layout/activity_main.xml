@@ -12,7 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true">
+        android:layout_centerHorizontal="true"
+        android:id="@+id/linearLayout">
 
         <LinearLayout
             android:orientation="horizontal"
@@ -21,26 +22,64 @@
             android:layout_weight="1"
             android:layout_gravity="center_horizontal">
 
-            <ImageButton
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="fill_parent"
-                android:id="@+id/bt_restaurant"
-                android:onClick="goToRestaurantActivity"
-                android:src="@drawable/retaurants"
-                android:scaleType="fitCenter"
-                android:background="@drawable/abc_action_bar_item_background_material"
-                android:padding="20dp"/>
 
-            <ImageButton
+            <LinearLayout
+                android:orientation="vertical"
                 android:layout_width="0dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_height="fill_parent"
-                android:id="@+id/bt_soldes"
-                android:src="@drawable/insa"
-                android:scaleType="fitCenter"
-                android:background="@drawable/abc_action_bar_item_background_material"
-                android:padding="20dp"/>
+                android:clickable="true"
+                android:background="@drawable/borders"
+                android:layout_margin="3dp">
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:id="@+id/im_restaurant"
+                    android:src="@drawable/restaurants"
+                    android:scaleType="fitCenter"
+                    android:layout_weight="4"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Restaurants"
+                    android:id="@+id/text_restaurants"
+                    android:layout_weight="1"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="3dp"
+                android:background="@drawable/borders"
+                android:clickable="true">
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:id="@+id/im_soldes"
+                    android:layout_weight="4"
+                    android:src="@drawable/insa"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Soldes"
+                    android:id="@+id/text_soldes"
+                    android:textAlignment="center"
+                    android:layout_weight="1" />
+            </LinearLayout>
 
         </LinearLayout>
         <LinearLayout
@@ -50,26 +89,6 @@
             android:layout_weight="1"
             android:layout_gravity="center_horizontal">
 
-            <ImageButton
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="fill_parent"
-                android:id="@+id/bt_orgaRepas"
-                android:src="@drawable/organiser_repas"
-                android:scaleType="fitCenter"
-                android:background="@drawable/abc_action_bar_item_background_material"
-                android:padding="20dp"/>
-
-            <ImageButton
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="fill_parent"
-                android:id="@+id/bt_invitation"
-                android:src="@drawable/repas_futurs"
-                android:scaleType="fitCenter"
-                android:background="@drawable/abc_action_bar_item_background_material"
-                android:padding="20dp"/>
-
         </LinearLayout>
         <LinearLayout
             android:orientation="horizontal"
@@ -77,27 +96,17 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:layout_gravity="center_horizontal">
-
-            <ImageButton
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="fill_parent"
-                android:id="@+id/bt_sos"
-                android:src="@drawable/sos"
-                android:scaleType="fitCenter"
-                android:background="@drawable/abc_action_bar_item_background_material"
-                android:padding="20dp"/>
-
-            <ImageButton
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="fill_parent"
-                android:id="@+id/bt_map"
-                android:src="@drawable/temps_attente"
-                android:scaleType="fitCenter"
-                android:background="@drawable/abc_action_bar_item_background_material"
-                android:padding="20dp"/>
 
         </LinearLayout>
     </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/linearLayout"
+        android:layout_alignEnd="@+id/linearLayout"
+        android:layout_marginRight="219dp"
+        android:layout_marginEnd="219dp" />
 </RelativeLayout>
