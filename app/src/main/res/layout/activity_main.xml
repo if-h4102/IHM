@@ -62,13 +62,56 @@
                 android:background="@drawable/borders"
                 android:onClick="goToSoldesActivity">
 
-                <ImageView
+                <LinearLayout
+                    android:orientation="horizontal"
                     android:layout_width="fill_parent"
                     android:layout_height="0dp"
-                    android:id="@+id/im_soldes"
-                    android:layout_weight="4"
-                    android:src="@drawable/insa"
-                    android:layout_margin="10dp" />
+                    android:layout_weight="2">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/im_izly"
+                        android:layout_weight="1"
+                        android:longClickable="false"
+                        android:src="@drawable/izly"
+                        android:layout_margin="10dp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="17,39 €"
+                        android:id="@+id/text_izly"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/imageView"
+                        android:layout_weight="1"
+                        android:src="@drawable/insa"
+                        android:layout_margin="10dp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="3.40 €"
+                        android:id="@+id/text_insa"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:textStyle="bold" />
+                </LinearLayout>
 
                 <TextView
                     android:layout_width="fill_parent"
@@ -78,9 +121,11 @@
                     android:id="@+id/text_soldes"
                     android:textAlignment="center"
                     android:layout_weight="1" />
+
             </LinearLayout>
 
         </LinearLayout>
+
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
