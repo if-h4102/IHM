@@ -40,7 +40,8 @@
                 android:src="@drawable/insa"
                 android:scaleType="fitCenter"
                 android:background="@drawable/abc_action_bar_item_background_material"
-                android:padding="20dp"/>
+                android:padding="20dp"
+                android:onClick="goToSoldesActivity" />
 
         </LinearLayout>
         <LinearLayout
@@ -58,7 +59,8 @@
                 android:src="@drawable/organiser_repas"
                 android:scaleType="fitCenter"
                 android:background="@drawable/abc_action_bar_item_background_material"
-                android:padding="20dp"/>
+                android:padding="20dp"
+                android:onClick="goToOrganisationActivity" />
 
             <ImageButton
                 android:layout_width="0dp"
@@ -68,7 +70,8 @@
                 android:src="@drawable/repas_futurs"
                 android:scaleType="fitCenter"
                 android:background="@drawable/abc_action_bar_item_background_material"
-                android:padding="20dp"/>
+                android:padding="20dp"
+                android:onClick="goToInvitationActivity" />
 
         </LinearLayout>
         <LinearLayout
@@ -86,7 +89,8 @@
                 android:src="@drawable/sos"
                 android:scaleType="fitCenter"
                 android:background="@drawable/abc_action_bar_item_background_material"
-                android:padding="20dp"/>
+                android:padding="20dp"
+                android:onClick="goToSosActivity" />
 
             <ImageButton
                 android:layout_width="0dp"
@@ -96,7 +100,8 @@
                 android:src="@drawable/temps_attente"
                 android:scaleType="fitCenter"
                 android:background="@drawable/abc_action_bar_item_background_material"
-                android:padding="20dp"/>
+                android:padding="20dp"
+                android:onClick="goToMapRestaurantActivity" />
 
         </LinearLayout>
     </LinearLayout>
