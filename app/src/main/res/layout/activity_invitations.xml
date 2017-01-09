@@ -28,7 +28,7 @@
     <ListView
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:id="@+id/listView"
+      android:id="@+id/invitations_listview"
       android:layout_weight="0"
       android:headerDividersEnabled="false"
       android:choiceMode="singleChoice" />
