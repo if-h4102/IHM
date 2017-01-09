@@ -18,8 +18,5 @@ public class MapRestaurant extends AppCompatActivity {
                 .target(new LatLng(-33, 150))
                 .zoom(13)
                 .build();
-
-        MapFragment mapFragment =  
-
     }
 }
