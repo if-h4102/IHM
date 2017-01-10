@@ -1,7 +1,30 @@
 package com.h4102.tp.miam.models;
 
-/**
- * Created by csamborski on 1/9/17.
- */
+import java.util.Date;
+import java.util.UUID;
+
 public class Restaurant {
+    private final UUID id;
+    private final Date creationDate;
+
+    private final String name;
+
+    public Restaurant(UUID id, String name) {
+        this.id = id;
+        this.creationDate = new Date();
+
+        this.name = name;
+    }
+
+    public UUID getId() {
+        return this.id;
+    }
+
+    public Date getCreationDate() {
+        return this.creationDate;
+    }
+
+    public String getName() {
+        return this.name;
+    }
 }

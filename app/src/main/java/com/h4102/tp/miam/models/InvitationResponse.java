@@ -7,6 +7,11 @@ public class InvitationResponse {
     private final UUID id;
 
     /**
+     * The author of the response
+     */
+    private User author;
+
+    /**
      * The date when the response was created
      */
     private Date creationDate;
@@ -15,30 +20,44 @@ public class InvitationResponse {
      * true if the request was accepted, false is the request was
      * rejected
      */
-    private final boolean accepted;
+    private final boolean isRequestAccepted;
 
     /**
-     * null if the request is rejected, other a reference to the prefered restaurant for
+     * null if the request is rejected, otherwise a reference to the prefered restaurant for
      * the request.
      */
     private final Restaurant preferedRestaurant;
 
-    InvitationResponse (boolean accepted, Restaurant preferedRestaurant) {
+    /**
+     * @param author the person responding to the invitation
+     * @param preferedRestaurant The choosen restaurant, null to reject the invitation
+     */
+    public InvitationResponse (User author, Restaurant preferedRestaurant) {
         this.id = UUID.randomUUID();
+        this.creationDate = new Date();
 
-        this.accepted = accepted;
-        if (accepted) {
-            this.preferedRestaurant = preferedRestaurant;
-        } else {
-            this.preferedRestaurant = null;
-        }
+        this.author = author;
+        this.preferedRestaurant = preferedRestaurant;
+        this.isRequestAccepted = preferedRestaurant != null;
     }
 
-    boolean getAccepted() {
-        return this.accepted;
+    public UUID getId() {
+        return this.id;
     }
 
-    Restaurant getPreferedRestaurant() {
+    public Date getCreationDate() {
+        return this.creationDate;
+    }
+
+    public User getAuthor() {
+        return this.author;
+    }
+
+    public boolean getIsRequestAccepted() {
+        return this.isRequestAccepted;
+    }
+
+    public Restaurant getPreferedRestaurant() {
         return this.preferedRestaurant;
     }
 }
