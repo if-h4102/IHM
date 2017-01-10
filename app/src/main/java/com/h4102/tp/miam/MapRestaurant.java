@@ -28,6 +28,5 @@ public class MapRestaurant extends AppCompatActivity {
 
         //Marker newmarker = mapFragment. .addMarker(new MarkerOptions().position(latlng).title("marker title").icon(BitmapDescriptorFactory.fromResource(R.drawable.marker_for_map_purpul)));
 
-
     }
 }

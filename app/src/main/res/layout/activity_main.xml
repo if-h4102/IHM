@@ -170,7 +170,7 @@
                 android:layout_margin="3dp"
                 android:background="@drawable/borders"
                 android:clickable="true"
-                android:onClick="goToInvitationActivity">
+                android:onClick="goToInvitationsActivity">
 
                 <ImageView
                     android:layout_width="fill_parent"
