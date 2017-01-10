@@ -1,7 +1,7 @@
 package com.h4102.tp.miam;
 
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 
 public class AccountBalance extends AppCompatActivity {
 
