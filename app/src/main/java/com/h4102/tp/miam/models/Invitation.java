@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.TreeMap;
 import java.util.UUID;
 
-public class Invitation {
+public class Invitation implements Comparable<Invitation> {
     private final UUID id;
     private final Date creationDate;
 
@@ -48,5 +48,10 @@ public class Invitation {
      */
     public void addResponse(InvitationResponse response) {
         this.responses.put(response.getAuthor(), response);
+    }
+
+    @Override
+    public int compareTo(Invitation other) {
+        return other == null ? 1 : this.id.compareTo(other.getId());
     }
 }

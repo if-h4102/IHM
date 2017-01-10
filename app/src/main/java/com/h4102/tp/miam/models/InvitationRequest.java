@@ -4,7 +4,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
-public class InvitationRequest {
+public class InvitationRequest implements Comparable<InvitationRequest> {
     private final UUID id;
 
     /**
@@ -54,5 +54,10 @@ public class InvitationRequest {
 
     public List<Restaurant> getProposedRestaurants() {
         return this.proposedRestaurants;
+    }
+
+    @Override
+    public int compareTo(InvitationRequest other){
+        return other == null ? 1 : this.id.compareTo(other.getId());
     }
 }

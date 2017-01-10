@@ -108,8 +108,12 @@ public class InvitationsService {
         }
     }
 
-    public TreeMap<UUID, Invitation> getRestaurants() {
+    public TreeMap<UUID, Invitation> getInvitations() {
         return this.invitations;
+    }
+
+    public List<Invitation> getInvitationsList() {
+        return new ArrayList<>(this.invitations.values());
     }
 
     private void addInvitation(Invitation invitation) {

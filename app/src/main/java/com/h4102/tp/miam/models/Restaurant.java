@@ -3,7 +3,7 @@ package com.h4102.tp.miam.models;
 import java.util.Date;
 import java.util.UUID;
 
-public class Restaurant {
+public class Restaurant implements Comparable<Restaurant> {
     private final UUID id;
     private final Date creationDate;
 
@@ -26,5 +26,10 @@ public class Restaurant {
 
     public String getName() {
         return this.name;
+    }
+
+    @Override
+    public int compareTo(Restaurant other){
+        return other == null ? 1 : this.id.compareTo(other.getId());
     }
 }

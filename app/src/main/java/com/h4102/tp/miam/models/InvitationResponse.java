@@ -3,7 +3,7 @@ package com.h4102.tp.miam.models;
 import java.util.Date;
 import java.util.UUID;
 
-public class InvitationResponse {
+public class InvitationResponse implements Comparable<InvitationResponse> {
     private final UUID id;
 
     /**
@@ -59,5 +59,10 @@ public class InvitationResponse {
 
     public Restaurant getPreferedRestaurant() {
         return this.preferedRestaurant;
+    }
+
+    @Override
+    public int compareTo(InvitationResponse other){
+        return other == null ? 1 : this.id.compareTo(other.getId());
     }
 }

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import com.h4102.tp.miam.activities.invitations.InvitationsActivity;
 
 public class MainActivity extends AppCompatActivity {
 
