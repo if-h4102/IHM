@@ -28,6 +28,8 @@ public class InvitationsListAdapter extends ArrayAdapter<Invitation> {
         public TextView text;
         public TextView mealTime;
         public TextView proposedRestaurants;
+        public Button acceptButton;
+        public Button rejectButton;
     }
 
     private static String getInvitationText(Invitation invitation) {
@@ -112,6 +114,8 @@ public class InvitationsListAdapter extends ArrayAdapter<Invitation> {
             viewHolder.text = (TextView) itemView.findViewById(R.id.invitation_text);
             viewHolder.proposedRestaurants = (TextView) itemView.findViewById(R.id.invitation_proposed_restaurants);
             viewHolder.mealTime = (TextView) itemView.findViewById(R.id.invitation_meal_time_clock);
+            viewHolder.acceptButton = (Button) itemView.findViewById(R.id.invitation_button_accept);
+            viewHolder.rejectButton = (Button) itemView.findViewById(R.id.invitation_button_reject);
             itemView.setTag(viewHolder);
         }
         ViewHolder holder = (ViewHolder) itemView.getTag();
@@ -125,36 +129,61 @@ public class InvitationsListAdapter extends ArrayAdapter<Invitation> {
         holder.text.setText(invitationText);
         holder.proposedRestaurants.setText(proposedRestaurantsText);
         holder.mealTime.setText(mealTimeText);
+
+        final InvitationsListAdapter self = this;
+
+        holder.acceptButton.setOnClickListener(new Button.OnClickListener(){
+            public void onClick(View buttonView) {
+                self.acceptInvitation(invitation);
+            }
+        });
+
+        holder.rejectButton.setOnClickListener(new Button.OnClickListener(){
+            public void onClick(View buttonView) {
+                self.rejectInvitation(invitation);
+            }
+        });
+
         return itemView;
     }
 
-    private static class SelectRestaurantHandler {
-        private Context context;
-        private Invitation invitation;
+    public void acceptInvitation(Invitation invitation) {
+        final Context context = this.context;
+        final List<Restaurant> restaurants = invitation.getRequest().getProposedRestaurants();
 
-        public SelectRestaurantHandler(Invitation invitation) {
-            this.setInvitation(invitation);
-            // TODO: this.context
-        }
-
-        public void setInvitation(Invitation invitation) {
-            this.invitation = invitation;
-        }
-
-        public void selectRestaurant(Context context, List<Restaurant> restaurants) {
+        if (restaurants.size() > 1) {
             AlertDialog.Builder builder = new AlertDialog.Builder(context);
             builder.setTitle(R.string.select_a_restaurant);
+            builder.setCancelable(true);
             builder.setSingleChoiceItems(
                 new RestaurantsListAdapter(context, restaurants),
                 -1,
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int item) {
-                        System.out.println("Click on restaurant");
+                        dialog.dismiss();
+                    }
+                }
+            );
+            AlertDialog alertDialog = builder.create();
+            alertDialog.show();
+        } else {
+            AlertDialog.Builder builder = new AlertDialog.Builder(context);
+            builder.setTitle("Invitation acceptée");
+            builder.setCancelable(true);
+            builder.setPositiveButton(
+                "OK",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int item) {
+                        dialog.dismiss();
                     }
                 }
             );
             AlertDialog alertDialog = builder.create();
             alertDialog.show();
         }
+    }
+
+    public void rejectInvitation(Invitation invitation) {
+        this.remove(invitation);
     }
 }

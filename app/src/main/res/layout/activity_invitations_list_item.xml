@@ -53,14 +53,14 @@
         android:text="Décliner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button4"
+        android:id="@+id/invitation_button_reject"
         android:layout_weight="1"/>
 
       <Button
         android:text="Accepter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button3"
+        android:id="@+id/invitation_button_accept"
         android:backgroundTint="@color/colorAccent"
         android:textColor="#FFFFFF"
         android:layout_weight="1"/>
