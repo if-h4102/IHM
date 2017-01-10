@@ -37,6 +37,6 @@
 
     <activity android:name=".MapRestaurant" />
     <activity android:name=".Organisation" />
-    <activity android:name=".Invitations" />
+    <activity android:name=".InvitationsActivity" />
   </application>
 </manifest>

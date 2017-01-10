@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void goToInvitationsActivity(View view){
-        Intent intent = new Intent(this, Invitations.class);
+        Intent intent = new Intent(this, InvitationsActivity.class);
         startActivity(intent);
     }
 
