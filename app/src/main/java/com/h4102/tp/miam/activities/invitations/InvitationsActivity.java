@@ -16,15 +16,10 @@ public class InvitationsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_invitations);
 
-        try {
-            final ListView listview = (ListView) findViewById(R.id.invitations_listview);
-            InvitationsService invitationsService = InvitationsService.getSingletonInstance();
-            final List<Invitation> invitations = invitationsService.getInvitationsList();
-            final InvitationsListAdapter adapter = new InvitationsListAdapter(this, invitations);
-            listview.setAdapter(adapter);
-        } catch (Exception e) {
-            e.printStackTrace(System.err);
-            System.exit(1);
-        }
+        final ListView listview = (ListView) findViewById(R.id.invitations_listview);
+        InvitationsService invitationsService = InvitationsService.getSingletonInstance();
+        final List<Invitation> invitations = invitationsService.getInvitationsList();
+        final InvitationsListAdapter adapter = new InvitationsListAdapter(this, invitations);
+        listview.setAdapter(adapter);
     }
 }

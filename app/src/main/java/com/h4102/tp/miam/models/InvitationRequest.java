@@ -23,16 +23,22 @@ public class InvitationRequest implements Comparable<InvitationRequest> {
     private final List<User> recipients;
 
     /**
+     * The proposed time for the meal
+     */
+    private final Date mealTime;
+
+    /**
      * The list of proposed restaurants
      */
     private final List<Restaurant> proposedRestaurants;
 
-    public InvitationRequest (User sender, List<User> recipients, List<Restaurant> proposedRestaurants) {
+    public InvitationRequest (User sender, List<User> recipients, Date mealTime, List<Restaurant> proposedRestaurants) {
         this.id = UUID.randomUUID();
         this.creationDate = new Date();
 
         this.sender = sender;
         this.recipients = recipients;
+        this.mealTime = mealTime;
         this.proposedRestaurants = proposedRestaurants;
     }
 
@@ -50,6 +56,10 @@ public class InvitationRequest implements Comparable<InvitationRequest> {
 
     public List<User> getRecipients() {
         return this.recipients;
+    }
+
+    public Date getMealTime() {
+        return this.mealTime;
     }
 
     public List<Restaurant> getProposedRestaurants() {

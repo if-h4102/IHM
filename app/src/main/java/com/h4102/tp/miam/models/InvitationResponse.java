@@ -32,6 +32,7 @@ public class InvitationResponse implements Comparable<InvitationResponse> {
      * @param author the person responding to the invitation
      * @param preferedRestaurant The choosen restaurant, null to reject the invitation
      */
+    // TODO: a null preferedRestaurant should not imply a rejection (ex: accept but don't care about the restaurant)
     public InvitationResponse (User author, Restaurant preferedRestaurant) {
         this.id = UUID.randomUUID();
         this.creationDate = new Date();
