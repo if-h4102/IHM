@@ -19,10 +19,12 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.concurrent.Callable;
 
-public class InvitationsListAdapter extends ArrayAdapter<Invitation> {
+public class ReceivedInvitationsListAdapter extends ArrayAdapter<Invitation> {
     private final Context context;
     private final List<Invitation> invitations;
+    private final Callable<Object> dataChangeListener;
 
     private static class ViewHolder {
         public TextView text;
@@ -98,10 +100,11 @@ public class InvitationsListAdapter extends ArrayAdapter<Invitation> {
         return df.format(mealTime);
     }
 
-    public InvitationsListAdapter(Context context, List<Invitation> invitations) {
+    public ReceivedInvitationsListAdapter(Context context, List<Invitation> invitations, Callable<Object> dataChangeListener) {
         super(context, -1, invitations);
         this.context = context;
         this.invitations = invitations;
+        this.dataChangeListener = dataChangeListener;
     }
 
     @Override
@@ -122,15 +125,15 @@ public class InvitationsListAdapter extends ArrayAdapter<Invitation> {
 
         final Invitation invitation = this.getItem(position);
 
-        final String invitationText = InvitationsListAdapter.getInvitationText(invitation);
-        final String proposedRestaurantsText = InvitationsListAdapter.getProposedRestaurantsText(invitation);
-        final String mealTimeText = InvitationsListAdapter.getMealTimeText(invitation);
+        final String invitationText = ReceivedInvitationsListAdapter.getInvitationText(invitation);
+        final String proposedRestaurantsText = ReceivedInvitationsListAdapter.getProposedRestaurantsText(invitation);
+        final String mealTimeText = ReceivedInvitationsListAdapter.getMealTimeText(invitation);
 
         holder.text.setText(invitationText);
         holder.proposedRestaurants.setText(proposedRestaurantsText);
         holder.mealTime.setText(mealTimeText);
 
-        final InvitationsListAdapter self = this;
+        final ReceivedInvitationsListAdapter self = this;
 
         holder.acceptButton.setOnClickListener(new Button.OnClickListener(){
             public void onClick(View buttonView) {
@@ -185,5 +188,11 @@ public class InvitationsListAdapter extends ArrayAdapter<Invitation> {
 
     public void rejectInvitation(Invitation invitation) {
         this.remove(invitation);
+        try {
+            this.dataChangeListener.call();
+        } catch (Exception e) {
+            e.printStackTrace(System.err);
+            System.exit(1);
+        }
     }
 }

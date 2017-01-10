@@ -16,15 +16,24 @@ import java.util.List;
 public class RestaurantsListAdapter extends ArrayAdapter<Restaurant> {
     private final Context context;
     private final List<Restaurant> restaurants;
+    private final boolean smallItems;
 
     static class ViewHolder {
         public TextView restaurantName;
     }
 
-    public RestaurantsListAdapter(Context context, List<Restaurant> restaurants) {
+        public RestaurantsListAdapter(Context context, List<Restaurant> restaurants) {
         super(context, -1, restaurants);
         this.context = context;
         this.restaurants = restaurants;
+        this.smallItems = false;
+    }
+
+    public RestaurantsListAdapter(Context context, List<Restaurant> restaurants, boolean smallItems) {
+        super(context, -1, restaurants);
+        this.context = context;
+        this.restaurants = restaurants;
+        this.smallItems = smallItems;
     }
 
     @Override

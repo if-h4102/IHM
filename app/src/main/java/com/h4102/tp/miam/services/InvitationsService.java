@@ -10,6 +10,7 @@ public class InvitationsService {
     public static final UUID INVITATION1_ID = UUID.randomUUID();
     public static final UUID INVITATION2_ID = UUID.randomUUID();
     public static final UUID INVITATION3_ID = UUID.randomUUID();
+    public static final UUID INVITATION4_ID = UUID.randomUUID();
 
     private static InvitationsService singletonInstance = null;
 
@@ -110,6 +111,30 @@ public class InvitationsService {
             invitation3.addResponse(new InvitationResponse(dan, olivier));
             invitation3.addResponse(new InvitationResponse(eve, grillon));
             this.addInvitation(invitation3);
+
+            // Invitation 4
+            // Sender: Alice (current user)
+            // Meal time: 13:45
+            // Choices: RU, Grillon
+            // Recipients:
+            // - Bob: REJECT
+            // - Charlie: PENDING
+            // - Dan: Grillon
+            // - Eve: Grillon
+            final User[] recipients4 = {bob, charlie, dan, eve};
+            final Restaurant[] restaurants4 = {ru, grillon};
+            final InvitationRequest req4 = new InvitationRequest(
+                alice,
+                new ArrayList<User>(Arrays.asList(recipients4)),
+                isoLikeDateFormat.parse("2017-01-11T13:45:00"),
+                new ArrayList<Restaurant>(Arrays.asList(restaurants4))
+            );
+            final Invitation invitation4 = new Invitation(InvitationsService.INVITATION4_ID, req4);
+            invitation4.addResponse(new InvitationResponse(bob, null));
+            // invitation4.addResponse(new InvitationResponse(charlie, olivier));
+            invitation4.addResponse(new InvitationResponse(dan, grillon));
+            invitation4.addResponse(new InvitationResponse(eve, grillon));
+            this.addInvitation(invitation4);
         } catch(Exception e) {
             e.printStackTrace(System.err);
             System.exit(1);
@@ -130,6 +155,26 @@ public class InvitationsService {
 
     public List<Invitation> getInvitationsList() {
         return new ArrayList<>(this.invitations.values());
+    }
+
+    public List<Invitation> getSentInvitations(User user) {
+        final List<Invitation> result = new ArrayList<>();
+        for (Invitation invitation : this.getInvitationsList()) {
+            if (invitation.getRequest().getSender() == user) {
+                result.add(invitation);
+            }
+        }
+        return result;
+    }
+
+    public List<Invitation> getReceivedInvitations(User user) {
+        final List<Invitation> result = new ArrayList<>();
+        for (Invitation invitation : this.getInvitationsList()) {
+            if (invitation.getRequest().getSender() != user) {
+                result.add(invitation);
+            }
+        }
+        return result;
     }
 
     private void addInvitation(Invitation invitation) {

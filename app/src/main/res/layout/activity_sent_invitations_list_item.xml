@@ -45,20 +45,36 @@
       android:layout_height="wrap_content"
       android:id="@+id/invitation_proposed_restaurants"/>
 
+    <TextView
+      android:id="@+id/invitations_responses_count"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="3 réponses reçues:"
+      android:textSize="12sp"/>
+
+    <ListView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/invitations_responses"
+      android:layout_weight="0"
+      android:headerDividersEnabled="false"
+      android:listSelector="@android:color/transparent"
+      android:choiceMode="none" />
+
     <LinearLayout
       android:orientation="horizontal"
       android:layout_width="match_parent"
       android:layout_height="match_parent">
 
       <Button
-        android:text="Décliner"
+        android:text="Supprimer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/invitation_button_reject"
         android:layout_weight="1"/>
 
       <Button
-        android:text="Accepter"
+        android:text="Finaliser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/invitation_button_accept"
