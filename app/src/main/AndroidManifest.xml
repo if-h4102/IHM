@@ -40,7 +40,11 @@
     <activity android:name=".activities.invitations.InvitationsActivity" />
     <activity android:name=".PrevertMealActivity" />
     <activity android:name=".AccountBalance" />
-    <activity android:name=".SOS"></activity>
+    <activity android:name=".SOS" />
+    <activity android:name=".RestaurantInsaMealActivity" />
+    <activity android:name=".RuJussieuMealActivity" />
+    <activity android:name=".OlivierMealActivity" />
+    <activity android:name=".GrillonMealActivity"></activity>
   </application>
 
 </manifest>
