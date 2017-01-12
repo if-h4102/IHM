@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -59,14 +60,19 @@ public class Organisation extends AppCompatActivity {
                         .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
                                 // continue with delete
-                                Intent intent = new Intent(context, Restaurant.class);
-                                startActivity(intent);
+                                finish();
+                                finish();
+                                CharSequence text = "Invitations envoyées !";
+                                int duration = Toast.LENGTH_SHORT;
+                                Toast toast = Toast.makeText(context, text, duration);
+                                toast.show();
                             }
                         })
                         .setNegativeButton("Annuler", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
-                                Intent intent = new Intent(context, Organisation.class);
-                                startActivity(intent);
+                                finish();
+                                //Intent intent = new Intent(context, Organisation.class);
+                                //startActivity(intent);
                             }
                         })
                         .setIcon(android.R.drawable.ic_dialog_alert)

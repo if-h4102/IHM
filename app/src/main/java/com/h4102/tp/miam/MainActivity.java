@@ -1,9 +1,13 @@
 package com.h4102.tp.miam;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TimePicker;
+
 import com.h4102.tp.miam.activities.invitations.InvitationsActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -31,7 +35,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void goToSosActivity(View view){
-
+        Intent intent = new Intent(this, SOS.class);
+        startActivity(intent);
     }
 
     public void goToInvitationsActivity(View view){
