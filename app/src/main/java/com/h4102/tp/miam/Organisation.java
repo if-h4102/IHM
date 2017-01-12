@@ -34,7 +34,7 @@ public class Organisation extends AppCompatActivity {
                 time.setLayoutParams(new ActionBar.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,200));
             }
         });
-        Send.setOnClickListener(new View.OnClickListener() {
+        Cancel.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 String[] listNames = {"Jean", "Pierre", "Boris"};
                 final boolean[] isSelectedArray = {false, false, false};
@@ -81,7 +81,7 @@ public class Organisation extends AppCompatActivity {
             }
         });
 
-        Cancel.setOnClickListener(new View.OnClickListener() {
+        Send.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v){
                 finish();
             }

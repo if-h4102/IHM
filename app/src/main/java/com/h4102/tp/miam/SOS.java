@@ -25,7 +25,7 @@ public class SOS extends AppCompatActivity {
         send.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 String[] listNames = {"Prévert", "Olivier", "Grillon", "Castor et Polux"};
-                final boolean[] isSelectedArray = {false, false, false};
+                final boolean[] isSelectedArray = {false, false, false, false};
                 new AlertDialog.Builder(context)
                     .setTitle("Invitez vos amis")
                     .setMultiChoiceItems(listNames, isSelectedArray, new DialogInterface.OnMultiChoiceClickListener() {

@@ -43,6 +43,12 @@
           android:id="@+id/textView35" />
 
         <TextView
+          android:text="Prix moyen: 3,5€"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/textView19" />
+
+        <TextView
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:textAppearance="?android:attr/textAppearanceMedium"
