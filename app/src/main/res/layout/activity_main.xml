@@ -75,7 +75,7 @@
                         android:layout_weight="1"
                         android:longClickable="false"
                         android:src="@drawable/izly_noir_et_blanc"
-                        android:layout_margin="10dp" />
+
 
                     <TextView
                         android:layout_width="0dp"
