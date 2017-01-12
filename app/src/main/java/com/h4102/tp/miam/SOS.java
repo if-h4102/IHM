@@ -27,7 +27,7 @@ public class SOS extends AppCompatActivity {
                 String[] listNames = {"Prévert", "Olivier", "Grillon", "Castor et Polux"};
                 final boolean[] isSelectedArray = {false, false, false, false};
                 new AlertDialog.Builder(context)
-                    .setTitle("Invitez vos amis")
+                    .setTitle("Choisissez votre restaurant")
                     .setMultiChoiceItems(listNames, isSelectedArray, new DialogInterface.OnMultiChoiceClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i, boolean b) {
