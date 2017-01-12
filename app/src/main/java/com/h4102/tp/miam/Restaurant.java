@@ -22,22 +22,22 @@ public class Restaurant extends AppCompatActivity {
     }
 
     public void goToRestaurantInsaDetails (View view){
-        //Intent intent = new Intent(this, RestaurantInsaMealActivity.class);
-        //startActivity(intent);
+        Intent intent = new Intent(this, RestaurantInsaMealActivity.class);
+        startActivity(intent);
     }
 
     public void goToGrillonDetails (View view){
-        //Intent intent = new Intent(this, GrillonMealActivity.class);
-        //startActivity(intent);
+        Intent intent = new Intent(this, GrillonMealActivity.class);
+        startActivity(intent);
     }
 
     public void goToOlivierDetails (View view){
-        //Intent intent = new Intent(this, OlivierMealActivity.class);
-        //startActivity(intent);
+        Intent intent = new Intent(this, OlivierMealActivity.class);
+        startActivity(intent);
     }
 
     public void goToRUDetails (View view){
-        //Intent intent = new Intent(this, RUMealActivity.class);
-        //startActivity(intent);
+        Intent intent = new Intent(this, RuJussieuMealActivity.class);
+        startActivity(intent);
     }
 }
