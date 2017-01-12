@@ -74,7 +74,7 @@
                         android:id="@+id/im_izly"
                         android:layout_weight="1"
                         android:longClickable="false"
-                        android:src="@drawable/izlyNoirEtBlanc"
+                        android:src="@drawable/izlynoiretblanc"
                         android:layout_margin="10dp" />
 
                     <TextView
@@ -99,7 +99,7 @@
                         android:layout_height="fill_parent"
                         android:id="@+id/imageView"
                         android:layout_weight="1"
-                        android:src="@drawable/insaNoirEtBlanc"
+                        android:src="@drawable/insanoiretblanc"
                         android:layout_margin="10dp" />
 
                     <TextView

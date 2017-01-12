@@ -39,7 +39,8 @@
     <activity android:name=".Organisation" />
     <activity android:name=".activities.invitations.InvitationsActivity" />
     <activity android:name=".PrevertMealActivity" />
-    <activity android:name=".AccountBalance"></activity>
+    <activity android:name=".AccountBalance" />
+    <activity android:name=".SOS"></activity>
   </application>
 
 </manifest>
