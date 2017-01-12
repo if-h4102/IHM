@@ -74,7 +74,7 @@
                         android:id="@+id/im_izly"
                         android:layout_weight="1"
                         android:longClickable="false"
-                        android:src="@drawable/izly_noir_et_blanc"
+                        android:src="@drawable/izly_noir_et_blanc"/>
 
 
                     <TextView
